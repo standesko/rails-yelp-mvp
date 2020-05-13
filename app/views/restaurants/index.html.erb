@@ -1,0 +1,21 @@
+<p id="notice"><%= notice %></p>
+<h1>Restaurants</h1>
+<table>
+  <thead>
+    <tr>
+      <th class="name m-10">Name</th>
+      <th class="category m-10">Category</th>
+      <th colspan="2"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @restaurants.each do |restaurant| %>
+      <tr>
+        <td><%= restaurant.name %></td>
+        <td><%= restaurant.category %></td>
+        <td><%= link_to 'More info', restaurant %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<br>
